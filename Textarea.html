@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Recipe</title>
+	<link rel = "stylesheet" href = "bootstrap/css/bootstrap.min.css">
+	<link rel = "stylesheet" href = "font-awesome-4.7.0/css/font-awesome.min.css">
+	<script type = "text/javascript" src = "bootstrap/js/jquery-slim.min.js"></script>
+	<script type = "text/javascript" src = "bootstrap/js/popper.min.js"></script>
+	<script type = "text/javascript" src = "bootstrap/js/bootstrap.js"></script>
+</head>
+
+<body>
+		<!-- Navigations -->
+		<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+		  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarText" aria-controls="navbarText" aria-expanded="false" aria-label="Toggle navigation">
+		    <span class="navbar-toggler-icon"></span>
+		  </button>
+		  <div class="collapse navbar-collapse" id="navbarText">
+		  <a class="navbar-brand mb-0" style="font-size:30px; color:white">MY Recipes</a>
+		    <ul class="navbar-nav mr-auto">
+		      <li class="nav-item active">
+		        <a class="nav-link fa fa-home" href="index.html">Home<span class="sr-only">(current)</span></a>
+		      </li>
+		      <li class="nav-item active">
+		        <a class="nav-link fa fa-book" href="list.html">My List<span class="sr-only">(current)</span></a>
+		      </li>
+		    </ul>
+		</nav>
+    
+	<!-- Icons -->
+	<div class="bg-dark">
+	<ul class="nav justify-content-center">
+		<li class="nav-item">
+		<button type="button" class="btn btn-dark" data-toggle="tooltip" data-placement="bottom" title="Twitter">
+			<a href="https://www.twitter.com" class="nav-link"><i class="fa fa-twitter" style="font-size:20px; color:white"></i></a>
+		</button>
+		</li>
+		<li class="nav-item">
+		<button type="button" class="btn btn-dark" data-toggle="tooltip" data-placement="bottom" title="Facebook">
+			<a href="https://www.facebook.com" class="nav-link"><i class="fa fa-facebook-square" style="font-size:20px; color:white"></i></a>
+		</li>
+		</li>
+		<li class="nav-item">
+		<button type="button" class="btn btn-dark" data-toggle="tooltip" data-placement="bottom" title="YouTube">
+			<a href="https://www.youtube.com" class="nav-link"><i class="fa fa-youtube" style="font-size:20px; color:white"></i></a>
+		</button>
+		</li>
+		<li class="nav-item">
+		<button type="button" class="btn btn-dark" data-toggle="tooltip" data-placement="bottom" title="Instagram">
+			<a href="https://www.instagram.com" class="nav-link"><i class="fa fa-instagram" style="font-size:20px; color:white"></i></a>
+		</button>
+		</li>
+		<li class="nav-item">
+		<button type="button" class="btn btn-dark" data-toggle="tooltip" data-placement="bottom" title="Google">
+			<a href="https://www.google.com" class="nav-link"><i class="fa fa-google" style="font-size:20px; color:white"></i></a>
+		</button>
+		</li>
+	</ul>	
+	</div>		
+
+<br>	
+		
+		<!-- Text Area -->
+		<script>
+		function Signup(){
+			var guest_name = document.getElementById("exampleInputName");
+			var email =  document.getElementById('exampleInputEmail1');
+			var password = document.getElementById('exampleInputPassword1');
+			if(guest_name.value  && email.value && password.value){
+				localStorage.setItem("Name",guest_name.value);
+				localStorage.setItem("Surname",guest_name.value);
+				localStorage.setItem("Email",email.value);
+				localStorage.setItem("Password",password.value);
+				alert("Recipe Successfully Saved!!!")
+			}else{
+				alert("Don't leave empty fields");
+			}
+
+
+		}
+	</script>
+<body class ="bg-danger">
+<div class="container">
+<br><br><br>
+		<div class="row">
+			<div class="col-md-8 col-md-offset-2">
+				<form>
+						<h1>List Here</h1>
+						<div class="form-group">
+						<label for="exampleInputName">Title</label>
+						<input type="text" class="form-control" id="exampleInputName" placeholder="Enter Title" autofocus />
+
+					  </div>
+					  <div class="form-group">
+						<label for="exampleInputEmail1">Ingredient</label>
+						<input type="text" class="form-control" id="exampleInputEmail1" placeholder="Enter Ingredient"  />
+
+					  </div>
+					  <div class="form-group">
+						<label for="exampleInputPassword1">Procedure</label>
+						<input type="text" class="form-control" id="exampleInputPassword1" placeholder="Enter Procedure"/>
+					  </div>
+
+					  <button type="button" onclick="Signup()" class="btn btn-warning">Save</button>
+						<hr>
+
+				</form>
+			</div>
+
+		</div>
+</div>	
+		
+		
+</body>
+</html>

@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>My Recipe</title>
+		<link rel="stylesheet" href="bootstrap/css/bootstrap.min.css">
+		<script type="text/javascript" src="bootstrap/js/jquery-slim.min.js"></script>
+		<script type="text/javascript" src="bootstrap/js/popper.min.js"></script>
+		<script type="text/javascript" src="bootstrap/js/bootstrap.js"></script>
+		<link rel="stylesheet" href="stylesheet.css">
+	</head>
+	<script>
+		function Signup(){
+			var guest_name = document.getElementById("exampleInputName");
+			var email =  document.getElementById('exampleInputEmail1');
+			var password = document.getElementById('exampleInputPassword1');
+			if(guest_name.value  && email.value && password.value){
+				localStorage.setItem("Name",guest_name.value);
+				localStorage.setItem("Surname",guest_name.value);
+				localStorage.setItem("Email",email.value);
+				localStorage.setItem("Password",password.value);
+				alert("Account record Successfully Saved!!!")
+			}else{
+				alert("Please don't leave empty fields");
+			}
+
+
+		}
+	</script>
+<body class ="bg-info">
+<div class="container">
+<br><br><br>
+		<div class="row">
+			<div class="col-md-8 col-md-offset-2">
+				<form>
+						<h1>Sign up</h1>
+						<div class="form-group">
+						<label for="exampleInputName">Name</label>
+						<input type="text" class="form-control" id="exampleInputName" placeholder="Enter Name" autofocus />
+
+					  </div>
+					  <div class="form-group">
+						<label for="exampleInputEmail1">Email address</label>
+						<input type="email" class="form-control" id="exampleInputEmail1" placeholder="Enter email"  />
+
+					  </div>
+					  <div class="form-group">
+						<label for="exampleInputPassword1">Password</label>
+						<input type="password" class="form-control" id="exampleInputPassword1" placeholder="Password"/>
+					  </div>
+
+					  <button type="button" onclick="Signup()" class="btn btn-warning">Done</button>
+						<hr>
+						<h6><a href="login.html" style = "color: white">Sign in here !</a></6>
+
+				</form>
+			</div>
+
+		</div>
+</div>
+</body>
+</html>
